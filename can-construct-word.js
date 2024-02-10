@@ -1,11 +1,20 @@
 "use strict";
 
 // add whatever parameters you deem necessary & write doc comment
+
+/** canConstructWord: Takes a word and letters as strings and returns a boolean
+ * based on whether the word can be created using the letters
+*/
+
 function canConstructWord(word, letters) { // w + k
 
   if (letters.length < word.length) { // constant; single operation
     return false;
   }
+
+  /**getFrequencyCounter: Takes a string and returns an object counting the
+   *frequency of the characters in that string
+   */
 
   function getFrequencyCounter(str) { // constant
 
