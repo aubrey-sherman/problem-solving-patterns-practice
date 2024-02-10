@@ -1,6 +1,26 @@
+"use strict"
 // add whatever parameters you deem necessary & write docstring
-function averagePair() {
 
+/**averagePair: takes a sorted array of numbers and a target average number and
+ * returns a boolean stating if a pair exists within that array where the
+ *  average is equivalent to the starting average
+  */
+
+function averagePair(nums, targetAvg) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while(left < right){                  //length of nums = n | O(n)
+    const avg = (nums[left] + nums[right]) / 2;
+
+    if(avg === targetAvg) return true;
+
+    if(avg < targetAvg) left++;
+
+    if(avg > targetAvg) right--;
+  }
+
+  return false;
 }
 
 
